@@ -30,7 +30,7 @@ class PostFactory(factory.django.DjangoModelFactory):
     title = factory.LazyAttribute(lambda x: faker.sentence())
     created_on = factory.LazyAttribute(lambda x: now())
     author = factory.SubFactory(UserFactory)
-    status = 0
+    status = 1
 
     class Meta:
         model = Post
